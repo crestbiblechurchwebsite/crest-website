@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      {% block title %}{{ title }} | Crests Bible Church{% endblock %}
+    </title>
+    <meta charset="UTF-8"/>
+    {% if description %}
+      <meta name="description" content="{{ description }}"/>
+    {% endif %}
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+    <link rel="stylesheet" href="/styles.css"/>
+    <script src="/alpine.min.js"></script>
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    <header class="h-24 text-white bg-crest-black">
+      <div class="container flex items-center justify-end h-full mx-auto text-lg">
+        <ul class="flex pb-0 space-x-8">
+          <li class="">
+            <span class="">About Us</span>
+            <ul class="hidden pb-0">
+              <li class=""><a href="/about-us/beliefs" class="">Beliefs</a></li>
+              <li class=""><a href="/about-us/location-and-service-times">Location and Service Times</a></li>
+              <li class=""><a href="/about-us/pastors" title="Pastors">Pastors</a></li>
+              <li class=""><a href="/about-us/missionaries">Missionaries</a></li>
+              <li class=""><a href="/about-us/membership">Membership</a></li>
+            </ul>
+          </li>
+          <li class="">
+            <span class="">Ministries</span>
+            <ul class="hidden pb-0">
+              <li class=""><a href="/ministries/events">Big Events</a></li>
+              <li class=""><a href="/ministries/upcoming-events" title="Upcoming events">Upcoming Events</a></li>
+              <li class=""><a href="/ministries/youth">Youth</a></li>
+              <li class=""><a href="/ministries/children">Children</a></li>
+              <li class=""><a href="/ministries/retirement-home">Retirement Home</a></li>
+              <li class=""><a href="/ministries/missions">Missions</a></li>
+              <li class=""><a href="/ministries/discipleship">Discipleship</a></li>
+            </ul>
+          </li>
+          <li class=""><a href="/contact-us">Contact Us</a></li>
+        </ul>
+      </div>
+    </header>
+    {% block content %}
+      {{ content | safe }}
+    {% endblock %}
+    <footer class="h-24 text-white bg-crest-black">
+      <div class="container flex flex-col items-center justify-center h-full mx-auto space-y-2">
+        <ul class="flex pb-0 space-x-8">
+          <li class=""><a class="underline hover:text-crest-dark-gold" href="https://www.facebook.com/pages/Crest-Bible-Church/318054578690" title="Facebook" target="_blank">Facebook</a></li>
+          <li class=""><a class="underline hover:text-crest-dark-gold" href="http://www.southparkdaycare.org/" title="Southpark Christian Child Care" target="_blank">South Park Christian Child Care</a></li>
+        </ul>
+        <p class="pb-0">Copyright 2021 | Crest Bible Church</p>
+      </div>
+    </footer>
+  </body>
+  </html>
