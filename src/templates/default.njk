@@ -15,7 +15,7 @@
     {% block head %}{% endblock %}
   </head>
   <body>
-    <header class="h-24 text-white bg-crest-black">
+    <header x-data="{ mobile_open: false }" class="h-24 text-white bg-crest-black">
       <div class="container items-center justify-end hidden h-full mx-auto text-lg md:flex">
         <ul class="z-10 flex pb-0 space-x-8">
           <li class="relative group">
@@ -42,6 +42,40 @@
           </li>
           <li class=""><a href="/contact-us">Contact Us</a></li>
         </ul>
+      </div>
+      <div class="flex items-center justify-end h-full pr-4 md:hidden">
+        <svg class="w-12 h-12 text-white cursor-pointer" @click="mobile_open = true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </div>
+      <div class="fixed top-0 bottom-0 left-0 right-0 z-20 overflow-scroll bg-crest-black" x-show="mobile_open">
+        <div class="flex items-center justify-end h-24 pr-4">
+          <svg class="w-12 h-12 text-white cursor-pointer" @click="mobile_open = false" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </div>
+        <div class="flex flex-col items-center">
+          <p><a class="py-4" href="/">Home</a></p>
+          <ul class="flex flex-col items-center">
+            <li class="py-4"><span class="text-2xl text-crest-gold">About Us</span></li>
+            <li><a class="block py-4" href="/about-us/location-and-service-times" class="">Location and Service Times</a></li>
+            <li><a class="block py-4" href="/about-us/beliefs" class="">Beliefs</a></li>
+            <li><a class="block py-4" href="/about-us/pastors" class="">Pastors</a></li>
+            <li><a class="block py-4" href="/about-us/missionaries" class="">Missionaries</a></li>
+            <li><a class="block py-4" href="/about-us/membership" class="">Membership</a></li>
+          </ul>
+          <ul class="flex flex-col items-center">
+            <li class="py-4"><span class="text-2xl text-crest-gold">Ministries</span></li>
+            <li><a class="block py-4" href="/ministries/events" class="">Big Events</a></li>
+            <li><a class="block py-4" href="/ministries/upcoming-events" class="">Upcoming Events</a></li>
+            <li><a class="block py-4" href="/ministries/youth" class="">Youth</a></li>
+            <li><a class="block py-4" href="/ministries/children" class="">Children</a></li>
+            <li><a class="block py-4" href="/ministries/retirement-home" class="">Retirement Home</a></li>
+            <li><a class="block py-4" href="/ministries/missions" class="">Missions</a></li>
+            <li><a class="block py-4" href="/ministries/discipleship" class="">Discipleship</a></li>
+          </ul>
+          <p><a class="py-4" href="/contact-us">Contact Us</a></p>
+        </div>
       </div>
     </header>
     <div class="relative bg-center bg-cover" style="background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/images/background.jpg');">
