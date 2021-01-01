@@ -43,10 +43,10 @@ gulp.task('server', function() {
   gulp.watch('src/images/*', gulp.series('images'))
   gulp.watch('src/fonts/*', gulp.series('fonts'))
   gulp.watch('src/scripts.js', gulp.series('js'))
-  gulp.watch(['src/**/*', 'tailwind.config.js'], gulp.series('css', 'render'))
+  gulp.watch(['src/**/*.njk', 'tailwind.config.js'], gulp.series('render', 'css'))
   gulp.watch('dist/**/*').on('change', browserSync.reload)
 })
 
-gulp.task('default', gulp.series('clean', 'css', 'render', 'images', 'fonts', 'js'))
+gulp.task('default', gulp.series('clean', 'render', 'css', 'images', 'fonts', 'js'))
 
 gulp.task('dev', gulp.series('default', 'server'))

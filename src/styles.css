@@ -20,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-bold font-heading text-crest-blue;
+  @apply font-light font-heading text-crest-blue;
 }
 
 @tailwind utilities;

@@ -5,9 +5,17 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: ['Open Sans', 'sans-serif'],
-      serif: ['serif'],
-      heading: ['Lato', 'san-serif']
+      'sans': ['Open Sans', 'sans-serif'],
+      'serif': ['serif'],
+      'heading': ['Lato', 'san-serif']
+    },
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px'
+    },
+    container: {
+      'padding': '1rem'
     },
     extend: {
       colors: {
@@ -17,11 +25,14 @@ module.exports = {
         'crest-light-blue': '#327dcb',
         'crest-gold': '#ffcc7f',
         'crest-dark-gold': '#da8609'
-      }
+      },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      'visibility': ['group-hover'],
+      'display': ['group-hover']
+    }
   },
   plugins: [],
 }

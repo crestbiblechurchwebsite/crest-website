@@ -16,34 +16,50 @@
   </head>
   <body>
     <header class="h-24 text-white bg-crest-black">
-      <div class="container flex items-center justify-end h-full mx-auto text-lg">
-        <ul class="flex pb-0 space-x-8">
-          <li class="">
-            <span class="">About Us</span>
-            <ul class="hidden pb-0">
-              <li class=""><a href="/about-us/beliefs" class="">Beliefs</a></li>
-              <li class=""><a href="/about-us/location-and-service-times">Location and Service Times</a></li>
-              <li class=""><a href="/about-us/pastors" title="Pastors">Pastors</a></li>
-              <li class=""><a href="/about-us/missionaries">Missionaries</a></li>
-              <li class=""><a href="/about-us/membership">Membership</a></li>
+      <div class="container items-center justify-end hidden h-full mx-auto text-lg md:flex">
+        <ul class="z-10 flex pb-0 space-x-8">
+          <li class="relative group">
+            <span class="cursor-pointer hover:text-crest-dark-gold">About Us</span>
+            <ul class="absolute left-0 invisible hidden p-4 space-y-4 group-hover:visible group-hover:block bg-crest-black">
+              <li class=""><a href="/about-us/beliefs" class="whitespace-nowrap hover:text-crest-dark-gold">Beliefs</a></li>
+              <li class=""><a href="/about-us/location-and-service-times" class="whitespace-nowrap hover:text-crest-dark-gold">Location and Service Times</a></li>
+              <li class=""><a href="/about-us/pastors" class="whitespace-nowrap hover:text-crest-dark-gold">Pastors</a></li>
+              <li class=""><a href="/about-us/missionaries" class="whitespace-nowrap hover:text-crest-dark-gold">Missionaries</a></li>
+              <li class=""><a href="/about-us/membership" class="whitespace-nowrap hover:text-crest-dark-gold">Membership</a></li>
             </ul>
           </li>
-          <li class="">
-            <span class="">Ministries</span>
-            <ul class="hidden pb-0">
-              <li class=""><a href="/ministries/events">Big Events</a></li>
-              <li class=""><a href="/ministries/upcoming-events" title="Upcoming events">Upcoming Events</a></li>
-              <li class=""><a href="/ministries/youth">Youth</a></li>
-              <li class=""><a href="/ministries/children">Children</a></li>
-              <li class=""><a href="/ministries/retirement-home">Retirement Home</a></li>
-              <li class=""><a href="/ministries/missions">Missions</a></li>
-              <li class=""><a href="/ministries/discipleship">Discipleship</a></li>
+          <li class="relative group">
+            <span class="cursor-pointer hover:text-crest-dark-gold">Ministries</span>
+            <ul class="absolute left-0 invisible hidden p-4 space-y-4 group-hover:visible group-hover:block bg-crest-black">
+              <li class=""><a href="/ministries/events" class="whitespace-nowrap hover:text-crest-dark-gold">Big Events</a></li>
+              <li class=""><a href="/ministries/upcoming-events" class="whitespace-nowrap hover:text-crest-dark-gold">Upcoming Events</a></li>
+              <li class=""><a href="/ministries/youth" class="whitespace-nowrap hover:text-crest-dark-gold">Youth</a></li>
+              <li class=""><a href="/ministries/children" class="whitespace-nowrap hover:text-crest-dark-gold">Children</a></li>
+              <li class=""><a href="/ministries/retirement-home" class="whitespace-nowrap hover:text-crest-dark-gold">Retirement Home</a></li>
+              <li class=""><a href="/ministries/missions" class="whitespace-nowrap hover:text-crest-dark-gold">Missions</a></li>
+              <li class=""><a href="/ministries/discipleship" class="whitespace-nowrap hover:text-crest-dark-gold">Discipleship</a></li>
             </ul>
           </li>
           <li class=""><a href="/contact-us">Contact Us</a></li>
         </ul>
       </div>
     </header>
+    <div class="relative bg-center bg-cover" style="background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/images/background.jpg');">
+      {% if section_title %}
+        <div class="container flex flex-col py-12 mx-auto space-y-8 md:flex-row md:space-x-16 lg:space-x-32 md:space-y-0">
+          <div class="flex items-center">
+            <a href="/"><img src="/images/church_logo.png" /></a>
+          </div>
+          <div class="flex items-center">
+            <h2 class="mx-auto text-5xl text-white md:text-7xl whitespace-nowrap md:mx-0">{{ section_title }}</h2>
+          </div>
+        </div>
+      {% else %}
+        <div class="container flex justify-center py-16 mx-auto">
+          <a href="/"><img src="/images/church_logo.png" /></a>
+        </div>
+      {% endif %}
+    </div>
     {% block content %}
       {{ content | safe }}
     {% endblock %}
