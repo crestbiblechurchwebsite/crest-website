@@ -1,0 +1,36 @@
+{% set title = "Location and Service Times" %}
+{% set section_title = "About Us" %}
+{% extends "default.njk" %}
+
+{% block content %}
+
+<div class="container mx-auto">
+  <div class="py-16">
+    <h1 class="text-center text-7xl">Location and Service Times</h1>
+  </div>
+</div>
+<div class="container flex flex-wrap pb-16 mx-auto">
+  <div class="w-full md:w-1/2 md:pr-4">
+    <h2 class="pb-4 text-5xl">Service Times</h2>
+    <h3 class="pb-2 text-3xl">Sunday Morning</h3>
+    <ul class="pb-4 list-disc list-inside">
+      <li>Sunday School - 9:30am</li>
+      <li>Main Service - 10:30am</li>
+    </ul>
+    <h3 class="pb-2 text-3xl">Wednesday Night</h3>
+    <ul class="list-disc list-inside">
+      <li>Adult Bible Study - 7:00 - 8:30</li>
+      <li>Youth Group - 7:00 - 8:30</li>
+    </ul>
+  </div>
+  <div class="w-full md:w-1/2 md:pl-4">
+    <h2 class="pb-4 text-5xl">Location</h2>
+    <p>8715 W 49th Terrace<br/>Merriam KS 66203</p>
+    <div class="relative h-0" style="padding-top: 25px; padding-bottom: 56.25%">
+      <iframe class="absolute top-0 left-0 w-full h-full" allowfullscreen="" frameborder="0" height="450" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3098.9655892330775!2d-94.6872999!3d39.038903999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0ed0aba173d21%3A0x3c6763be20c95fbc!2s8715+W+49th+Terrace%2C+Merriam%2C+KS+66203!5e0!3m2!1sen!2sus!4v1439768885019" style="border:0" width="800"></iframe>
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}
