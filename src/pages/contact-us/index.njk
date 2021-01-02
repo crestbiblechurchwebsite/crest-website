@@ -1,0 +1,48 @@
+{% set title = "Contact Us" %}
+{% set section_title = "Contact Us" %}
+{% extends "default.njk" %}
+
+{% block content %}
+
+<div class="container mx-auto">
+  <div class="py-16">
+    <h1 class="text-5xl text-center md:text-7xl">Contact Us</h1>
+  </div>
+</div>
+<div class="container pb-16 mx-auto">
+  <h2 class="pb-2 text-3xl">Our Address</h2>
+  <p class="pb-8">
+    8715 W 49th Terrace<br/>
+    Merriam KS 66203
+  </p>
+  <h2 class="pb-2 text-3xl">Our Phone Number</h2>
+  <p class="pb-8">
+    (913) 722-6021
+  </p>
+  <p>
+    You can also contact us using the form below.
+  </p>
+  <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+    <p class="hidden">
+      <label for="bot-field">Don’t fill this out if you’re human: </label>
+      <input name="bot-field" />
+    </p>
+    <p>
+      <label class="block" for="name">Name:</label>
+      <input class="w-full px-3 py-2 border border-gray-300 rounded-md text-crest-black md:w-1/2" type="text" name="name" required="required" />
+    </p>
+    <p>
+      <label class="block" for="email">Email:</label>
+      <input class="w-full px-3 py-2 border border-gray-300 rounded-md text-crest-black md:w-1/2" type="text" name="email" required="required" />
+    </p>
+    <p>
+      <label class="block" for="message">Message:</label>
+      <textarea class="px-3 py-2 border border-gray-300 rounded-md text-crest-black" name="message" rows="5" cols="40" required="required"></textarea>
+    </p>
+    <p>
+      <button class="px-4 py-2 text-white rounded-md bg-crest-dark-gold hover:bg-crest-gold" type="submit">Send</button>
+    </p>
+  </form>
+</div>
+
+{% endblock %}
