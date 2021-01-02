@@ -2,8 +2,41 @@
 
 {% block content %}
 
-<div class="container px-16 mx-auto">
-  <h1>Home Page</h1>
+<div class="bg-crest-blue">
+  <div class="container py-24 mx-auto text-white md:flex">
+    <div class="w-full text-center md:w-1/3 md:pr-4">
+      <h2 class="pb-4 text-5xl text-white">Visit</h2>
+      <p>We would love for you to visit any of our services, Bible studies, or events. Just check our <a class="text-crest-gold hover:text-crest-dark-gold" href="/about-us/location-and-service-times">service times and location</a>.</p>
+    </div>
+    <div class="w-full text-center md:w-1/3 md:px-4">
+      <h2 class="pb-4 text-5xl text-white">Beliefs</h2>
+      <p>Everything we do at Crest Bible Church is rooted in <a class="text-crest-gold hover:text-crest-dark-gold" href="/about-us/beliefs">sound, Biblical doctrine</a>.</p>
+    </div>
+    <div class="w-full text-center md:w-1/3 md:pl-4">
+      <h2 class="pb-4 text-5xl text-white">Ministries</h2>
+      <p>At Crest there are a multitude of <a class="text-crest-gold hover:text-crest-dark-gold" href="/ministries/events">opportunities to serve</a> both the lost and the saved.</p>
+    </div>
+  </div>
+</div>
+<div class="container flex py-24 mx-auto">
+  <div class="w-full md:w-1/2 md:pr-4">
+    <h2 class="pb-4 text-5xl">Welcome</h2>
+    <p class="pb-2">We would love for you to join us on Sunday mornings:</p>
+    <ul class="pb-4 list-disc list-inside">
+      <li>Sunday School - 9:30am</li>
+      <li>Main Service - 10:30am</li>
+    </ul>
+    <p class="pb-2">Or for our mid-week service on Wednesday:</p>
+    <ul class="list-disc list-inside">
+      <li>Adult Bible Study - 7:00 - 8:30</li>
+      <li>Youth Group - 7:00 - 8:30</li>
+    </ul>
+  </div>
+  <div class="w-full md:w-1/2 md:pl-4">
+    <div class="relative h-0" style="padding-top: 25px; padding-bottom: 56.25%">
+      <iframe class="absolute top-0 left-0 w-full h-full" allowfullscreen="" frameborder="0" height="450" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3098.9655892330775!2d-94.6872999!3d39.038903999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0ed0aba173d21%3A0x3c6763be20c95fbc!2s8715+W+49th+Terrace%2C+Merriam%2C+KS+66203!5e0!3m2!1sen!2sus!4v1439768885019" style="border:0" width="800"></iframe>
+    </div>
+  </div>
 </div>
 
 {% endblock %}
