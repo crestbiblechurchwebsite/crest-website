@@ -10,11 +10,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^10.1.0",
     "browser-sync": "^2.26.13",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-nunjucks-render": "^2.2.3",
     "gulp-postcss": "^9.0.0",
+    "postcss": "^8.2.2",
     "tailwindcss": "^2.0.2"
   }
 }
